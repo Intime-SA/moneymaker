@@ -14,11 +14,10 @@ import {
 
 // Componentes personalizados
 import ImageSlider from "@/components/image-slider";
-import BackgroundGraphics from "@/components/background-graphics";
 import AnimatedCtaButton from "@/components/animated-cta-button";
-import AnimatedGif from "@/components/animated-gif";
 import GameIconsSection from "@/components/game-icons-section";
 import { useMobileDetector } from "@/hooks/use-mobile";
+import RegistrationStepsSlider from "@/components/image-slider";
 
 export default function LandingPage() {
   const [mounted, setMounted] = useState(false);
@@ -51,18 +50,29 @@ export default function LandingPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
               >
-                {/* Logo Imagen */}
+                {/* Logo Imagen - New Bear Mascot */}
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
-                  className="relative w-40 flex justify-center"
+                  style={{
+                    scale: 1.5,
+                    marginBottom: "100px",
+                  }}
+                  className="relative w-full flex flex-col items-center justify-center h-[60vh]"
                 >
                   <img
-                    src={"/oso.png"}
-                    alt="MooneyMaker Logo"
-                    className="h-36 object-contain filter drop-shadow-[0_0_12px_#008f39]"
+                    src="/oso-cool.png"
+                    alt="MooneyMaker Mascot"
+                    className="w-[70%] max-w-[280px] max-h-[100%] object-contain filter drop-shadow-[0_0_15px_#008f39]"
                   />
+                  <div className="mt-4">
+                    <AnimatedCtaButton
+                      href="https://mooneymaker.co/?ref=57781"
+                      text="¡JUGAR AHORA!"
+                      size="large"
+                    />
+                  </div>
                 </motion.div>
 
                 {/* GIF Animado */}
@@ -145,39 +155,43 @@ export default function LandingPage() {
 
               {/* CTA Principal */}
               <motion.div
-                className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 p-4 rounded-xl border border-custom-green/30 shadow-[0_0_30px_rgba(0,143,57,0.15)] w-full"
+                className="relative p-0 rounded-xl w-full overflow-hidden"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.6 }}
               >
-                <div className="flex items-center justify-center mb-3">
-                  <motion.div
-                    className="w-8 h-8 rounded-full bg-[#008f39] flex items-center justify-center mr-2"
-                    animate={{
-                      scale: [1, 1.2, 1],
-                      rotate: [0, 5, -5, 0],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Number.POSITIVE_INFINITY,
-                      repeatType: "reverse",
-                    }}
-                  >
-                    <Sparkles className="w-5 h-5 text-[#008f39]" />
-                  </motion.div>
-                  <p className="text-[#008f39] font-medium text-base">
-                    ¡Solo por hoy: acceso limitado!
+                {/* Background Image */}
+                <img
+                  src="/oso6.jpg"
+                  alt="Fondo Oso Temático"
+                  className="absolute inset-0 w-full h-full object-cover z-0"
+                />
+                {/* Dark Overlay */}
+                <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
+
+                {/* Content Wrapper */}
+                <div className="relative z-20 p-4">
+                  <div className="flex items-center justify-center mb-">
+                    <motion.div className="w-120 h-2 rounded-full bg-[transparent] flex items-center justify-center -mt-2 h-[150px]">
+                    <p className="text-white font-medium text-base">
+                      ¡Solo por hoy: acceso limitado!
+                    </p>
+                    </motion.div>
+
+                  </div>
+                  <p className="mb-4 text-base text-center text-white">
+                    Registrate y desbloquea el acceso completo a la plataforma.
                   </p>
-                </div>
-                <p className="mb-4 text-base text-center">
-                  Registrate y desbloquea el acceso completo a la plataforma.
-                </p>
-                <div className="flex justify-center">
-                  <AnimatedCtaButton
-                    href="https://mooneymaker.co/?ref=57781"
-                    text="¡REGISTRARME AHORA!"
-                    size="large"
-                  />
+                  <div className="flex justify-center">
+                    <motion.a
+                      href="https://mooneymaker.co/?ref=57781"
+                      className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold rounded-lg shadow-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 ease-in-out transform hover:scale-105 text-lg"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      ¡REGISTRARME AHORA!
+                    </motion.a>
+                  </div>
                 </div>
               </motion.div>
 
@@ -405,25 +419,39 @@ export default function LandingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
             >
-              {/* Fila para Logo y GIF */}
+              {/* Fila para Logo y Mascota */}
               <motion.div
-                className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 md:space-x-10"
+                className="flex flex-row items-center justify-center space-x-8 md:space-x-12 lg:space-x-16"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
               >
+                {/* Logo */}
                 <motion.div
-                  initial={{ x: 50, opacity: 0 }}
+                  initial={{ x: -30, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ type: "spring", duration: 0.8, delay: 0.4 }}
-                  className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 flex items-center justify-center"
+                  className="flex items-center justify-center"
                 >
                   <img
-                    src={"oso.png"} // Usando logoUrl que ahora es /oso.png
-                    alt="Imagen MooneyMaker"
+                    src={logoUrl || "/placeholder.svg"}
+                    alt="MooneyMaker Logo"
+                    className="h-20 md:h-24 lg:h-28 object-contain"
+                  />
+                </motion.div>
+
+                {/* Mascota */}
+                <motion.div
+                  initial={{ x: 30, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ type: "spring", duration: 0.8, delay: 0.6 }}
+                  className="w-40 sm:w-48 md:w-56 lg:w-64 flex items-center justify-center"
+                >
+                  <img
+                    src="/oso-cool.png"
+                    alt="MooneyMaker Mascot"
                     className="max-w-full max-h-full object-contain filter drop-shadow-[0_0_15px_#008f39]"
                   />
-                  {/* <AnimatedGif /> */}
                 </motion.div>
               </motion.div>
 
@@ -508,39 +536,51 @@ export default function LandingPage() {
 
             {/* CTA Principal */}
             <motion.div
-              className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 p-8 rounded-xl border border-[#008f39] max-w-2xl mx-auto shadow-[0_0_30px_rgba(0,143,57,0.15)]"
+              className="relative p-0 rounded-xl border border-[#008f39] max-w-2xl mx-auto shadow-[0_0_30px_rgba(0,143,57,0.15)] overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.6 }}
             >
-              <div className="flex items-center justify-center mb-4">
-                <motion.div
-                  className="w-10 h-10 rounded-full bg-[#008f39] flex items-center justify-center mr-2"
-                  animate={{
-                    scale: [1, 1.2, 1],
-                    rotate: [0, 5, -5, 0],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Number.POSITIVE_INFINITY,
-                    repeatType: "reverse",
-                  }}
-                >
-                  <Sparkles className="w-6 h-6 text-white" />
-                </motion.div>
-                <p className="text-[#008f39] font-medium text-lg">
-                  ¡Solo por hoy: acceso limitado!
+              {/* Background Image */}
+              <img
+                src="/oso3.jpg"
+                alt="Fondo Oso Temático"
+                className="absolute inset-0 w-full h-full object-cover z-0"
+              />
+              {/* Dark Overlay */}
+              <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
+
+              {/* Content Wrapper */}
+              <div className="relative z-20 p-8">
+                <div className="flex items-center justify-center mb-4">
+                  <motion.div
+                    className="w-10 h-10 rounded-full bg-[#008f39] flex items-center justify-center mr-2"
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      rotate: [0, 5, -5, 0],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Number.POSITIVE_INFINITY,
+                      repeatType: "reverse",
+                    }}
+                  >
+                    <Sparkles className="w-6 h-6 text-white" />
+                  </motion.div>
+                  <p className="text-white font-medium text-lg">
+                    ¡Solo por hoy: acceso limitado!
+                  </p>
+                </div>
+                <p className="mb-6 text-lg sm:text-xl text-center text-white">
+                  Registrate y desbloquea el acceso completo a la plataforma.
                 </p>
-              </div>
-              <p className="mb-6 text-lg sm:text-xl text-center">
-                Registrate y desbloquea el acceso completo a la plataforma.
-              </p>
-              <div className="flex justify-center">
-                <AnimatedCtaButton
-                  href="https://mooneymaker.co/?ref=57781"
-                  text="¡REGISTRARME AHORA!"
-                  size="large"
-                />
+                <div className="flex justify-center">
+                  <AnimatedCtaButton
+                    href="https://mooneymaker.co/?ref=57781"
+                    text="¡REGISTRARME AHORA!"
+                    size="large"
+                  />
+                </div>
               </div>
             </motion.div>
 
@@ -557,7 +597,7 @@ export default function LandingPage() {
               <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-[#008f39]">
                 📢 ¿Querés saber más antes de registrarte?
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start text-left">
                 <motion.ul
                   className="space-y-4"
                   variants={{
@@ -592,26 +632,10 @@ export default function LandingPage() {
                     <Check className="h-5 w-5 text-[#008f39] mr-2 mt-0.5" />
                     <span>Accedé desde cualquier lugar</span>
                   </motion.li>
-                </motion.ul>
-                <motion.ul
-                  className="space-y-4"
-                  variants={{
-                    hidden: { opacity: 0 },
-                    show: {
-                      opacity: 1,
-                      transition: {
-                        staggerChildren: 0.1,
-                        delayChildren: 0.2,
-                      },
-                    },
-                  }}
-                  initial="hidden"
-                  animate="show"
-                >
                   <motion.li
                     className="flex items-start bg-gray-900/40 p-3 rounded-lg"
                     variants={{
-                      hidden: { opacity: 0, x: 20 },
+                      hidden: { opacity: 0, x: -20 },
                       show: { opacity: 1, x: 0 },
                     }}
                   >
@@ -621,7 +645,7 @@ export default function LandingPage() {
                   <motion.li
                     className="flex items-start bg-gray-900/40 p-3 rounded-lg"
                     variants={{
-                      hidden: { opacity: 0, x: 20 },
+                      hidden: { opacity: 0, x: -20 },
                       show: { opacity: 1, x: 0 },
                     }}
                   >
@@ -629,104 +653,26 @@ export default function LandingPage() {
                     <span>Carga y retira, todo desde la misma plataforma</span>
                   </motion.li>
                 </motion.ul>
+
+                <motion.div
+                  className="w-full rounded-lg overflow-hidden shadow-xl"
+                  initial={{ opacity: 0, x: 20, scale: 0.95 }}
+                  animate={{ opacity: 1, x: 0, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  <img
+                    src="/oso2.jpg"
+                    alt="La emoción empieza en un clic. Oso de MooneyMaker con gafas de sol."
+                    className="w-full h-auto object-contain rounded-lg"
+                  />
+                </motion.div>
               </div>
             </motion.div>
           </motion.div>
 
           {/* Nueva Sección: Pasos para Jugar */}
           <section className="w-full max-w-5xl mx-auto py-16 px-4 sm:px-6">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Columna Izquierda: Información y CTA */}
-              <motion.div
-                className="space-y-6"
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <div className="flex justify-center md:justify-start mb-6">
-                  <img
-                    src={logoUrl || "/placeholder.svg"}
-                    alt="MooneyMaker Logo"
-                    className="h-16 object-contain"
-                  />
-                </div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#008f39] to-[#008f39]">
-                  Empezá a Ganar en Minutos
-                </h2>
-                <p className="text-lg text-gray-300">
-                  Seguí estos sencillos pasos y descubrí un universo de
-                  entretenimiento y premios. Nuestra plataforma está diseñada
-                  para que tu única preocupación sea la diversión.
-                </p>
-                <motion.ul
-                  className="space-y-4 text-gray-300"
-                  variants={{
-                    hidden: { opacity: 0 },
-                    show: {
-                      opacity: 1,
-                      transition: {
-                        staggerChildren: 0.2,
-                      },
-                    },
-                  }}
-                  initial="hidden"
-                  animate="show"
-                >
-                  <motion.li
-                    className="flex items-center bg-gray-900/40 p-3 rounded-lg"
-                    variants={{
-                      hidden: { opacity: 0, y: 10 },
-                      show: { opacity: 1, y: 0 },
-                    }}
-                  >
-                    <Info className="h-5 w-5 text-[#008f39] mr-2" />
-                    <span className="font-medium">
-                      Registro ultra-rápido y seguro.
-                    </span>
-                  </motion.li>
-                  <motion.li
-                    className="flex items-center bg-gray-900/40 p-3 rounded-lg"
-                    variants={{
-                      hidden: { opacity: 0, y: 10 },
-                      show: { opacity: 1, y: 0 },
-                    }}
-                  >
-                    <Info className="h-5 w-5 text-[#008f39] mr-2" />
-                    <span className="font-medium">
-                      Múltiples métodos de depósito confiables.
-                    </span>
-                  </motion.li>
-                  <motion.li
-                    className="flex items-center bg-gray-900/40 p-3 rounded-lg"
-                    variants={{
-                      hidden: { opacity: 0, y: 10 },
-                      show: { opacity: 1, y: 0 },
-                    }}
-                  >
-                    <Info className="h-5 w-5 text-[#008f39] mr-2" />
-                    <span className="font-medium">
-                      Retiros directos a tu cuenta, sin demoras.
-                    </span>
-                  </motion.li>
-                </motion.ul>
-                <div className="pt-4">
-                  <AnimatedCtaButton
-                    href="https://mooneymaker.co/?ref=57781"
-                    text="Unirme Ahora"
-                  />
-                </div>
-              </motion.div>
-
-              {/* Columna Derecha: Slider de Imágenes como componente independiente */}
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="floating"
-              >
-                <ImageSlider />
-              </motion.div>
-            </div>
+            <RegistrationStepsSlider />
           </section>
         </main>
 
