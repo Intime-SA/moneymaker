@@ -1,10 +1,15 @@
 import type React from "react"
 import "./globals.css"
-// import { Inter } from "next/font/google" // Eliminamos Inter
 import { ThemeProvider } from "@/components/theme-provider"
 import type { Metadata } from 'next'
+import { Montserrat } from 'next/font/google'
 
-// const inter = Inter({ subsets: [\"latin\"] }) // Eliminamos Inter
+// Configurar Montserrat
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  display: 'swap', // Buena práctica para el rendimiento de fuentes
+  // Puedes especificar pesos si quieres cargarlos explícitamente, ej: weights: ['400', '700']
+})
 
 const siteConfig = {
   name: "MooneyMaker",
@@ -82,13 +87,10 @@ export default function RootLayout({
     <html lang="es" className="dark"> {/* Puedes quitar className=\"dark\" si ThemeProvider lo maneja o si prefieres tema claro por defecto */}
       <head>
         {/* Las etiquetas <title> y <meta name="description"> se manejan ahora con el objeto metadata */}
-        {/* Fuentes de Google Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /> {/* Usamos crossOrigin con anonymous para compatibilidad */}
-        <link href="https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&family=Short+Stack&display=swap" rel="stylesheet" />
+        {/* Las fuentes de Google Fonts anteriores se eliminan, Montserrat se carga vía next/font */}
       </head>
-      {/* Quitamos inter.className del body */}
-      <body> 
+      {/* Aplicamos la clase de Montserrat al body */}
+      <body className={montserrat.className}> 
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
         </ThemeProvider>

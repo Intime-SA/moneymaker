@@ -33,7 +33,7 @@ export default function AnimatedCtaButton({
     >
       {/* Efecto de brillo */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-600 rounded-lg blur-lg"
+        className="absolute inset-0  text-[#008f39] rounded-lg blur-lg"
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 0.7 : 0.3 }}
         transition={{ duration: 0.3 }}
@@ -45,7 +45,7 @@ export default function AnimatedCtaButton({
           {[...Array(5)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-1 h-1 bg-amber-300 rounded-full"
+              className="absolute w-1 h-1 bg-custom-green rounded-full"
               initial={{
                 x: "50%",
                 y: "50%",
@@ -68,7 +68,7 @@ export default function AnimatedCtaButton({
 
       <Link href={href} target="_blank" rel="noopener noreferrer">
         <motion.button
-          className={`relative z-10 w-full sm:w-auto bg-gradient-to-r from-amber-500 to-amber-600 text-black font-bold rounded-lg transition-all duration-300 flex items-center justify-center ${
+          className={`relative z-10 w-full sm:w-auto bg-custom-green text-[#008f39] font-bold rounded-lg transition-all duration-300 flex items-center justify-center border-2 border-custom-green shadow-lg hover:bg-white hover:text-custom-green hover:shadow-xl active:scale-95 ${
             size === "large" ? "py-6 px-8 text-lg" : "py-4 px-6 text-base"
           }`}
           whileHover={{

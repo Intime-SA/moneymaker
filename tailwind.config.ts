@@ -20,6 +20,8 @@ const config = {
     },
     extend: {
       colors: {
+        'custom-green': '#008f39',
+        'custom-dark-bg': '#000000',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -97,12 +99,12 @@ const config = {
         },
         glow: {
           "0%, 100%": {
-            boxShadow: "0 0 5px rgba(245, 158, 11, 0.3)",
-            borderColor: "rgba(245, 158, 11, 0.3)",
+            boxShadow: "0 0 5px rgba(0,143,57,0.3)",
+            borderColor: "rgba(0,143,57,0.3)",
           },
           "50%": {
-            boxShadow: "0 0 20px rgba(245, 158, 11, 0.6)",
-            borderColor: "rgba(245, 158, 11, 0.6)",
+            boxShadow: "0 0 20px rgba(0,143,57,0.6)",
+            borderColor: "rgba(0,143,57,0.6)",
           },
         },
       },
@@ -113,6 +115,11 @@ const config = {
         pulse: "pulse 3s ease-in-out infinite",
         glow: "glow 2s ease-in-out infinite",
       },
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+        heading: ['Montserrat', 'sans-serif'],
+        body: ['Montserrat', 'sans-serif'],
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

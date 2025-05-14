@@ -27,21 +27,21 @@ export default function ImageSlider() {
       alt: "Paso 1 - Registrarse",
       title: "Paso 1: Registrate Fácil",
       description: "Creá tu cuenta en segundos y preparate para la acción.",
-      icon: <Dice1 className="w-6 h-6 text-amber-400" />,
+      icon: <Dice1 className="w-6 h-6 text-custom-green" />,
     },
     {
       src: "https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/registr%2FPASO%202%20-%20Depositar.png?alt=media&token=da133758-1c5c-4ebd-ba48-0a337cd31f4e",
       alt: "Paso 2 - Depositar",
       title: "Paso 2: Cargá Saldo",
       description: "Depositá de forma segura y rápida para empezar a jugar.",
-      icon: <Dice2 className="w-6 h-6 text-amber-400" />,
+      icon: <Dice2 className="w-6 h-6 text-custom-green" />,
     },
     {
       src: "https://firebasestorage.googleapis.com/v0/b/mayoristakaurymdp.appspot.com/o/registr%2FPASO%203%20-%20Retirar%20ganancias.png?alt=media&token=492bca54-4239-4f33-a562-e8122825c077",
       alt: "Paso 3 - Retirar ganancias",
       title: "Paso 3: Retirá Tus Ganancias",
       description: "Obtené tus premios directamente y sin complicaciones.",
-      icon: <Dice3 className="w-6 h-6 text-amber-400" />,
+      icon: <Dice3 className="w-6 h-6 text-custom-green" />,
     },
   ]
 
@@ -77,18 +77,18 @@ export default function ImageSlider() {
       transition={{ duration: 0.7 }}
       className="w-full max-w-md mx-auto relative"
     >
-      <div className="absolute -top-10 -left-10 w-20 h-20 bg-amber-500/20 rounded-full blur-xl z-0"></div>
-      <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-amber-500/20 rounded-full blur-xl z-0"></div>
+      <div className="absolute -top-10 -left-10 w-20 h-20 bg-custom-green/20 rounded-full blur-xl z-0"></div>
+      <div className="absolute -bottom-10 -right-10 w-20 h-20 bg-custom-green/20 rounded-full blur-xl z-0"></div>
 
       <Carousel
         setApi={setApi}
-        className="rounded-xl overflow-hidden shadow-[0_0_25px_rgba(245,158,11,0.3)] border border-amber-500/30 bg-gradient-to-b from-gray-900/90 to-black/90"
+        className="rounded-xl overflow-hidden shadow-[0_0_25px_rgba(0,143,57,0.3)] border border-custom-green/30 bg-gradient-to-b from-gray-900/90 to-black/90"
         opts={{
           loop: true,
           align: "center",
         }}
       >
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent z-10 opacity-70"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-custom-green to-transparent z-10 opacity-70"></div>
 
         <CarouselContent>
           {steps.map((step, index) => (
@@ -127,7 +127,7 @@ export default function ImageSlider() {
                     />
 
                     {/* Efecto de brillo en los bordes */}
-                    <div className="absolute inset-0 rounded-md border border-amber-500/20 shadow-[inset_0_0_10px_rgba(245,158,11,0.2)]"></div>
+                    <div className="absolute inset-0 rounded-md border border-custom-green/20 shadow-[inset_0_0_10px_rgba(0,143,57,0.2)]"></div>
                   </div>
 
                   <motion.div
@@ -136,7 +136,7 @@ export default function ImageSlider() {
                     transition={{ delay: 0.2, duration: 0.4 }}
                     className="p-4 text-center"
                   >
-                    <h4 className="text-xl font-semibold text-amber-400 mb-2">{step.title}</h4>
+                    <h4 className="text-xl font-semibold text-custom-green mb-2">{step.title}</h4>
                     <p className="text-sm text-gray-300">{step.description}</p>
                   </motion.div>
                 </motion.div>
@@ -149,15 +149,15 @@ export default function ImageSlider() {
           {steps.map((_, idx) => (
             <motion.div
               key={idx}
-              className={`w-2 h-2 rounded-full ${idx === activeIndex ? "bg-amber-500" : "bg-gray-600"}`}
+              className={`w-2 h-2 rounded-full ${idx === activeIndex ? "bg-custom-green" : "bg-gray-600"}`}
               animate={{ scale: idx === activeIndex ? 1.2 : 1 }}
               transition={{ duration: 0.3 }}
             />
           ))}
         </div>
 
-        <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-slate-800/70 hover:bg-slate-700/90 border-amber-500/50 text-amber-400 shadow-[0_0_10px_rgba(245,158,11,0.3)]" />
-        <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-slate-800/70 hover:bg-slate-700/90 border-amber-500/50 text-amber-400 shadow-[0_0_10px_rgba(245,158,11,0.3)]" />
+        <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-slate-800/70 hover:bg-slate-700/90 border-custom-green/50 text-custom-green shadow-[0_0_10px_rgba(0,143,57,0.3)]" />
+        <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-slate-800/70 hover:bg-slate-700/90 border-custom-green/50 text-custom-green shadow-[0_0_10px_rgba(0,143,57,0.3)]" />
       </Carousel>
     </motion.div>
   )

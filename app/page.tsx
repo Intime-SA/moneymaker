@@ -38,10 +38,10 @@ export default function LandingPage() {
     return (
       <div className="relative min-h-screen overflow-x-hidden w-full">
         {/* Fondo con gráficos animados */}
-        <BackgroundGraphics />
+        {/* <BackgroundGraphics /> */}
 
         {/* Contenedor principal con gradiente */}
-        <div className="flex min-h-screen flex-col bg-gradient-to-br from-black via-neutral-900/90 to-amber-900/40 text-white relative">
+        <div className="flex min-h-screen flex-col bg-[#000301] text-white relative">
           <main className="flex-1 flex flex-col items-center justify-center px-4 py-6 relative z-10 w-full">
             <motion.div className="w-full text-center space-y-8 max-w-md mx-auto">
               {/* Contenedor para Logo, GIF y Título Principal */}
@@ -59,21 +59,13 @@ export default function LandingPage() {
                   className="relative w-40 flex justify-center"
                 >
                   <img
-                    src={logoUrl || "/placeholder.svg"}
+                    src={"/oso.png"}
                     alt="MooneyMaker Logo"
-                    className="h-16 object-contain"
+                    className="h-36 object-contain filter drop-shadow-[0_0_12px_#008f39]"
                   />
                 </motion.div>
 
                 {/* GIF Animado */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  className="w-40 h-40"
-                >
-                  <AnimatedGif />
-                </motion.div>
 
                 {/* Título Principal */}
                 <motion.div
@@ -84,10 +76,8 @@ export default function LandingPage() {
                 >
                   <h2 className="font-heading text-xl font-bold leading-tight">
                     Descubrí una{" "}
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500">
-                      nueva forma
-                    </span>{" "}
-                    de divertirte
+                    <span className="text-[#008f39]">nueva forma</span> de
+                    divertirte
                   </h2>
                   <p className="text-sm text-gray-300 mx-auto">
                     Un espacio exclusivo para los que buscan adrenalina,
@@ -104,11 +94,11 @@ export default function LandingPage() {
                 transition={{ duration: 0.7, delay: 0.4 }}
               >
                 <motion.div
-                  className="bg-gray-900/60 p-3 rounded-lg border border-amber-500/20 border-glow"
+                  className="bg-gray-900/60 p-3 rounded-lg border border-neutral-700/50 transition-all duration-300 hover:border-custom-green hover:shadow-[0_0_15px_rgba(0,143,57,0.6)]"
                   whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                 >
                   <h3 className="font-semibold text-base mb-1 flex items-center justify-center">
-                    <Gamepad2 className="w-4 h-4 mr-2 text-amber-400" />
+                    <Gamepad2 className="w-4 h-4 mr-2 text-custom-green" />
                     Retos únicos
                   </h3>
                   <p className="text-sm text-gray-300 text-center">
@@ -116,11 +106,11 @@ export default function LandingPage() {
                   </p>
                 </motion.div>
                 <motion.div
-                  className="bg-gray-900/60 p-3 rounded-lg border border-amber-500/20"
+                  className="bg-gray-900/60 p-3 rounded-lg border border-neutral-700/50 transition-all duration-300 hover:border-custom-green hover:shadow-[0_0_15px_rgba(0,143,57,0.6)]"
                   whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                 >
                   <h3 className="font-semibold text-base mb-1 flex items-center justify-center">
-                    <Zap className="w-4 h-4 mr-2 text-amber-400" />
+                    <Zap className="w-4 h-4 mr-2 text-custom-green" />
                     Autogestión
                   </h3>
                   <p className="text-sm text-gray-300 text-center">
@@ -128,11 +118,11 @@ export default function LandingPage() {
                   </p>
                 </motion.div>
                 <motion.div
-                  className="bg-gray-900/60 p-3 rounded-lg border border-amber-500/20"
+                  className="bg-gray-900/60 p-3 rounded-lg border border-neutral-700/50 transition-all duration-300 hover:border-custom-green hover:shadow-[0_0_15px_rgba(0,143,57,0.6)]"
                   whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                 >
                   <h3 className="font-semibold text-base mb-1 flex items-center justify-center">
-                    <Coins className="w-4 h-4 mr-2 text-amber-400" />
+                    <Coins className="w-4 h-4 mr-2 text-custom-green" />
                     Depósitos Fáciles
                   </h3>
                   <p className="text-sm text-gray-300 text-center">
@@ -140,11 +130,11 @@ export default function LandingPage() {
                   </p>
                 </motion.div>
                 <motion.div
-                  className="bg-gray-900/60 p-3 rounded-lg border border-amber-500/20"
+                  className="bg-gray-900/60 p-3 rounded-lg border border-neutral-700/50 transition-all duration-300 hover:border-custom-green hover:shadow-[0_0_15px_rgba(0,143,57,0.6)]"
                   whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
                 >
                   <h3 className="font-semibold text-base mb-1 flex items-center justify-center">
-                    <Trophy className="w-4 h-4 mr-2 text-amber-400" />
+                    <Trophy className="w-4 h-4 mr-2 text-custom-green" />
                     Premios Instantáneos
                   </h3>
                   <p className="text-sm text-gray-300 text-center">
@@ -155,14 +145,14 @@ export default function LandingPage() {
 
               {/* CTA Principal */}
               <motion.div
-                className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 p-4 rounded-xl border border-amber-500/30 shadow-[0_0_30px_rgba(245,158,11,0.15)] w-full"
+                className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 p-4 rounded-xl border border-custom-green/30 shadow-[0_0_30px_rgba(0,143,57,0.15)] w-full"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.6 }}
               >
                 <div className="flex items-center justify-center mb-3">
                   <motion.div
-                    className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center mr-2"
+                    className="w-8 h-8 rounded-full bg-[#008f39] flex items-center justify-center mr-2"
                     animate={{
                       scale: [1, 1.2, 1],
                       rotate: [0, 5, -5, 0],
@@ -173,9 +163,9 @@ export default function LandingPage() {
                       repeatType: "reverse",
                     }}
                   >
-                    <Sparkles className="w-5 h-5 text-amber-400" />
+                    <Sparkles className="w-5 h-5 text-[#008f39]" />
                   </motion.div>
-                  <p className="text-amber-300 font-medium text-base">
+                  <p className="text-[#008f39] font-medium text-base">
                     ¡Solo por hoy: acceso limitado!
                   </p>
                 </div>
@@ -203,7 +193,7 @@ export default function LandingPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.8 }}
                 >
-                  <h3 className="text-lg font-semibold mb-4 text-amber-400 ml-4">
+                  <h3 className="text-lg font-semibold mb-4 text-[#008f39] ml-4">
                     📢 ¿Querés saber más antes de registrarte?
                   </h3>
                   <div className="flex flex-col space-y-3">
@@ -228,7 +218,7 @@ export default function LandingPage() {
                           show: { opacity: 1, y: 0 },
                         }}
                       >
-                        <Check className="h-4 w-4 text-amber-400 mr-2 mt-0.5" />
+                        <Check className="h-4 h-4 text-[#008f39] mr-2 mt-0.5" />
                         <span className="text-sm">
                           No es necesario descargar nada
                         </span>
@@ -240,7 +230,7 @@ export default function LandingPage() {
                           show: { opacity: 1, y: 0 },
                         }}
                       >
-                        <Check className="h-4 w-4 text-amber-400 mr-2 mt-0.5" />
+                        <Check className="h-4 h-4 text-[#008f39] mr-2 mt-0.5" />
                         <span className="text-sm">
                           Accedé desde cualquier lugar
                         </span>
@@ -252,7 +242,7 @@ export default function LandingPage() {
                           show: { opacity: 1, y: 0 },
                         }}
                       >
-                        <Check className="h-4 w-4 text-amber-400 mr-2 mt-0.5" />
+                        <Check className="h-4 h-4 text-[#008f39] mr-2 mt-0.5" />
                         <span className="text-sm">Completamente gratis</span>
                       </motion.li>
                       <motion.li
@@ -262,7 +252,7 @@ export default function LandingPage() {
                           show: { opacity: 1, y: 0 },
                         }}
                       >
-                        <Check className="h-4 w-4 text-amber-400 mr-2 mt-0.5" />
+                        <Check className="h-4 h-4 text-[#008f39] mr-2 mt-0.5" />
                         <span className="text-sm">
                           Carga y retira, todo desde la misma plataforma
                         </span>
@@ -290,7 +280,7 @@ export default function LandingPage() {
                       className="h-12 object-contain"
                     />
                   </div>
-                  <h2 className="text-xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-amber-500">
+                  <h2 className="text-xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#008f39] to-[#008f39]">
                     Empezá a Ganar en Minutos
                   </h2>
                   <p className="text-base text-gray-300">
@@ -318,7 +308,7 @@ export default function LandingPage() {
                         show: { opacity: 1, y: 0 },
                       }}
                     >
-                      <Info className="h-4 w-4 text-amber-400 mr-2" />
+                      <Info className="h-4 h-4 text-[#008f39] mr-2" />
                       <span className="font-medium text-sm">
                         Registro ultra-rápido y seguro.
                       </span>
@@ -330,7 +320,7 @@ export default function LandingPage() {
                         show: { opacity: 1, y: 0 },
                       }}
                     >
-                      <Info className="h-4 w-4 text-amber-400 mr-2" />
+                      <Info className="h-4 h-4 text-[#008f39] mr-2" />
                       <span className="font-medium text-sm">
                         Múltiples métodos de depósito confiables.
                       </span>
@@ -342,7 +332,7 @@ export default function LandingPage() {
                         show: { opacity: 1, y: 0 },
                       }}
                     >
-                      <Info className="h-4 w-4 text-amber-400 mr-2" />
+                      <Info className="h-4 h-4 text-[#008f39] mr-2" />
                       <span className="font-medium text-sm">
                         Retiros directos a tu cuenta, sin demoras.
                       </span>
@@ -361,7 +351,7 @@ export default function LandingPage() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8 }}
-                  className="floating mt-6 w-full"
+                  className="floating mt-6 w-full ml-4"
                 >
                   <ImageSlider />
                 </motion.div>
@@ -402,10 +392,10 @@ export default function LandingPage() {
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       {/* Fondo con gráficos animados */}
-      <BackgroundGraphics />
+      {/* <BackgroundGraphics /> */}
 
       {/* Contenedor principal con gradiente */}
-      <div className="flex min-h-screen flex-col bg-gradient-to-br from-black via-neutral-900/90 to-amber-900/40 text-white relative">
+      <div className="flex min-h-screen flex-col bg-[#000301] text-white relative">
         <main className="flex-1 flex flex-col items-center justify-center px-4 py-12 sm:px-6 relative z-10 max-w-6xl mx-auto">
           <motion.div className="w-full text-center space-y-12">
             {/* Contenedor para Logo, GIF y Título Principal */}
@@ -422,29 +412,18 @@ export default function LandingPage() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
               >
-                {/* Logo Imagen */}
-                <motion.div
-                  initial={{ x: -50, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ type: "spring", duration: 0.8, delay: 0.3 }}
-                  className="relative"
-                >
-                  <img
-                    src={logoUrl || "/placeholder.svg"}
-                    alt="MooneyMaker Logo"
-                    className="h-20 sm:h-24 md:h-28 lg:h-32 object-contain"
-                  />{" "}
-                  {/* Hacemos el logo un poco más grande */}
-                </motion.div>
-
-                {/* GIF Animado */}
                 <motion.div
                   initial={{ x: 50, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ type: "spring", duration: 0.8, delay: 0.4 }}
-                  className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64"
+                  className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 flex items-center justify-center"
                 >
-                  <AnimatedGif />
+                  <img
+                    src={"oso.png"} // Usando logoUrl que ahora es /oso.png
+                    alt="Imagen MooneyMaker"
+                    className="max-w-full max-h-full object-contain filter drop-shadow-[0_0_15px_#008f39]"
+                  />
+                  {/* <AnimatedGif /> */}
                 </motion.div>
               </motion.div>
 
@@ -457,7 +436,7 @@ export default function LandingPage() {
               >
                 <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                   Descubrí una{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-500">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#008f39] to-[#008f39]">
                     nueva forma
                   </span>{" "}
                   de divertirte
@@ -478,11 +457,11 @@ export default function LandingPage() {
               transition={{ duration: 0.7, delay: 0.4 }}
             >
               <motion.div
-                className="bg-gray-900/60 p-5 rounded-lg border border-amber-500/20 border-glow"
+                className="bg-gray-900/60 p-5 rounded-lg border border-neutral-700/50 transition-all duration-300 hover:border-custom-green hover:shadow-[0_0_20px_rgba(0,143,57,0.6)]"
                 whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
               >
                 <h3 className="font-semibold text-lg mb-2 flex items-center">
-                  <Gamepad2 className="w-5 h-5 mr-2 text-amber-400" />
+                  <Gamepad2 className="w-5 h-5 mr-2 text-custom-green" />
                   Retos únicos
                 </h3>
                 <p className="text-gray-300">
@@ -490,11 +469,11 @@ export default function LandingPage() {
                 </p>
               </motion.div>
               <motion.div
-                className="bg-gray-900/60 p-5 rounded-lg border border-amber-500/20"
+                className="bg-gray-900/60 p-5 rounded-lg border border-neutral-700/50 transition-all duration-300 hover:border-custom-green hover:shadow-[0_0_20px_rgba(0,143,57,0.6)]"
                 whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
               >
                 <h3 className="font-semibold text-lg mb-2 flex items-center">
-                  <Zap className="w-5 h-5 mr-2 text-amber-400" />
+                  <Zap className="w-5 h-5 mr-2 text-custom-green" />
                   Autogestión
                 </h3>
                 <p className="text-gray-300">
@@ -502,11 +481,11 @@ export default function LandingPage() {
                 </p>
               </motion.div>
               <motion.div
-                className="bg-gray-900/60 p-5 rounded-lg border border-amber-500/20"
+                className="bg-gray-900/60 p-5 rounded-lg border border-neutral-700/50 transition-all duration-300 hover:border-custom-green hover:shadow-[0_0_20px_rgba(0,143,57,0.6)]"
                 whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
               >
                 <h3 className="font-semibold text-lg mb-2 flex items-center">
-                  <Coins className="w-5 h-5 mr-2 text-amber-400" />
+                  <Coins className="w-5 h-5 mr-2 text-custom-green" />
                   Depósitos Fáciles
                 </h3>
                 <p className="text-gray-300">
@@ -514,11 +493,11 @@ export default function LandingPage() {
                 </p>
               </motion.div>
               <motion.div
-                className="bg-gray-900/60 p-5 rounded-lg border border-amber-500/20"
+                className="bg-gray-900/60 p-5 rounded-lg border border-neutral-700/50 transition-all duration-300 hover:border-custom-green hover:shadow-[0_0_20px_rgba(0,143,57,0.6)]"
                 whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
               >
                 <h3 className="font-semibold text-lg mb-2 flex items-center">
-                  <Trophy className="w-5 h-5 mr-2 text-amber-400" />
+                  <Trophy className="w-5 h-5 mr-2 text-custom-green" />
                   Premios Instantáneos
                 </h3>
                 <p className="text-gray-300">
@@ -529,14 +508,14 @@ export default function LandingPage() {
 
             {/* CTA Principal */}
             <motion.div
-              className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 p-8 rounded-xl border border-amber-500/30 max-w-2xl mx-auto shadow-[0_0_30px_rgba(245,158,11,0.15)]"
+              className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 p-8 rounded-xl border border-[#008f39] max-w-2xl mx-auto shadow-[0_0_30px_rgba(0,143,57,0.15)]"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.6 }}
             >
               <div className="flex items-center justify-center mb-4">
                 <motion.div
-                  className="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center mr-2"
+                  className="w-10 h-10 rounded-full bg-[#008f39] flex items-center justify-center mr-2"
                   animate={{
                     scale: [1, 1.2, 1],
                     rotate: [0, 5, -5, 0],
@@ -547,9 +526,9 @@ export default function LandingPage() {
                     repeatType: "reverse",
                   }}
                 >
-                  <Sparkles className="w-6 h-6 text-amber-400" />
+                  <Sparkles className="w-6 h-6 text-white" />
                 </motion.div>
-                <p className="text-amber-300 font-medium text-lg">
+                <p className="text-[#008f39] font-medium text-lg">
                   ¡Solo por hoy: acceso limitado!
                 </p>
               </div>
@@ -575,7 +554,7 @@ export default function LandingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.8 }}
             >
-              <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-amber-400">
+              <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-[#008f39]">
                 📢 ¿Querés saber más antes de registrarte?
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
@@ -600,7 +579,7 @@ export default function LandingPage() {
                       show: { opacity: 1, x: 0 },
                     }}
                   >
-                    <Check className="h-5 w-5 text-amber-400 mr-2 mt-0.5" />
+                    <Check className="h-5 w-5 text-[#008f39] mr-2 mt-0.5" />
                     <span>No es necesario descargar nada</span>
                   </motion.li>
                   <motion.li
@@ -610,7 +589,7 @@ export default function LandingPage() {
                       show: { opacity: 1, x: 0 },
                     }}
                   >
-                    <Check className="h-5 w-5 text-amber-400 mr-2 mt-0.5" />
+                    <Check className="h-5 w-5 text-[#008f39] mr-2 mt-0.5" />
                     <span>Accedé desde cualquier lugar</span>
                   </motion.li>
                 </motion.ul>
@@ -636,7 +615,7 @@ export default function LandingPage() {
                       show: { opacity: 1, x: 0 },
                     }}
                   >
-                    <Check className="h-5 w-5 text-amber-400 mr-2 mt-0.5" />
+                    <Check className="h-5 w-5 text-[#008f39] mr-2 mt-0.5" />
                     <span>Completamente gratis</span>
                   </motion.li>
                   <motion.li
@@ -646,7 +625,7 @@ export default function LandingPage() {
                       show: { opacity: 1, x: 0 },
                     }}
                   >
-                    <Check className="h-5 w-5 text-amber-400 mr-2 mt-0.5" />
+                    <Check className="h-5 w-5 text-[#008f39] mr-2 mt-0.5" />
                     <span>Carga y retira, todo desde la misma plataforma</span>
                   </motion.li>
                 </motion.ul>
@@ -671,7 +650,7 @@ export default function LandingPage() {
                     className="h-16 object-contain"
                   />
                 </div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-amber-300 to-amber-500">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[#008f39] to-[#008f39]">
                   Empezá a Ganar en Minutos
                 </h2>
                 <p className="text-lg text-gray-300">
@@ -700,7 +679,7 @@ export default function LandingPage() {
                       show: { opacity: 1, y: 0 },
                     }}
                   >
-                    <Info className="h-5 w-5 text-amber-400 mr-2" />
+                    <Info className="h-5 w-5 text-[#008f39] mr-2" />
                     <span className="font-medium">
                       Registro ultra-rápido y seguro.
                     </span>
@@ -712,7 +691,7 @@ export default function LandingPage() {
                       show: { opacity: 1, y: 0 },
                     }}
                   >
-                    <Info className="h-5 w-5 text-amber-400 mr-2" />
+                    <Info className="h-5 w-5 text-[#008f39] mr-2" />
                     <span className="font-medium">
                       Múltiples métodos de depósito confiables.
                     </span>
@@ -724,7 +703,7 @@ export default function LandingPage() {
                       show: { opacity: 1, y: 0 },
                     }}
                   >
-                    <Info className="h-5 w-5 text-amber-400 mr-2" />
+                    <Info className="h-5 w-5 text-[#008f39] mr-2" />
                     <span className="font-medium">
                       Retiros directos a tu cuenta, sin demoras.
                     </span>

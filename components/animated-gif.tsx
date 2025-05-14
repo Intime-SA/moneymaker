@@ -15,7 +15,7 @@ export default function AnimatedGif() {
         stiffness: 100,
       }}
       style={{
-        filter: "drop-shadow(0 0 15px rgba(245, 158, 11, 0.5))",
+        filter: "drop-shadow(0 0 15px rgba(0,143,57,0.5))",
       }}
     >
       <Image
@@ -27,7 +27,7 @@ export default function AnimatedGif() {
       />
 
       {/* Efecto de brillo alrededor del GIF */}
-      <div className="absolute inset-0 -z-10 bg-amber-500/10 blur-xl rounded-full"></div>
+      <div className="absolute inset-0 -z-10 bg-custom-green/10 blur-xl rounded-full"></div>
     </motion.div>
   )
 }
