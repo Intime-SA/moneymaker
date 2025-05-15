@@ -182,14 +182,12 @@ export default function LandingPage() {
                   <p className="mb-4 text-base text-center text-white">
                     Registrate y desbloquea el acceso completo a la plataforma.
                   </p>
-                  <div className="flex justify-center bg-green">
+                  <div className="flex justify-center">
                     <motion.a
                       href="https://mooneymaker.co/?ref=57781"
-                      className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold rounded-lg shadow-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 ease-in-out transform hover:scale-105 text-lg"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      className="bg-custom-green text-white font-bold py-3 px-6 rounded-lg shadow-lg text-lg border-2 border-green-400 hover:bg-green-700 hover:border-green-500 hover:scale-105 active:scale-95 transition-all duration-300 ease-in-out transform"
                     >
-                      ¡REGISTRARME AHORA!
+                      Registrate Ahora
                     </motion.a>
                   </div>
                 </div>
@@ -575,12 +573,12 @@ export default function LandingPage() {
                   Registrate y desbloquea el acceso completo a la plataforma.
                 </p>
                 <div className="flex justify-center">
-                  <AnimatedCtaButton
-                    href="https://mooneymaker.co/?ref=57781"
-                    text="¡REGISTRARME AHORA!"
-                    size="large"
-                    variant="default"
-                  />
+                  <a 
+                    href="https://mooneymaker.co/?ref=57781" 
+                    className="bg-custom-green text-white font-bold py-3 px-6 rounded-lg shadow-lg text-lg border-2 border-green-400 hover:bg-green-700 hover:border-green-500 hover:scale-105 active:scale-95 transition-all duration-300 ease-in-out transform"
+                  >
+                    Registrate Ahora
+                  </a>
                 </div>
               </div>
             </motion.div>
