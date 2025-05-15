@@ -64,7 +64,7 @@ export default function LandingPage() {
                   <img
                     src="/oso-cool.png"
                     alt="MooneyMaker Mascot"
-                    className="w-[70%] max-w-[280px] max-h-[100%] object-contain filter drop-shadow-[0_0_15px_#008f39]"
+                    className="w-[70%] max-w-[200px] object-contain filter drop-shadow-[0_0_15px_#008f39]"
                   />
                   <div className="mt-4">
                     <AnimatedCtaButton
@@ -156,7 +156,7 @@ export default function LandingPage() {
               {/* CTA Principal */}
               <motion.div
                 className="relative p-0 rounded-xl w-full overflow-hidden"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 70 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.6 }}
               >
@@ -173,7 +173,7 @@ export default function LandingPage() {
                 <div className="relative z-20 p-4">
                   <div className="flex items-center justify-center mb-">
                     <motion.div className="w-120 h-2 rounded-full bg-[transparent] flex items-center justify-center -mt-2 h-[150px]">
-                    <p className="text-white font-medium text-base">
+                    <p className="text-white font-extrabold text-base">
                       ¡Solo por hoy: acceso limitado!
                     </p>
                     </motion.div>
@@ -182,7 +182,7 @@ export default function LandingPage() {
                   <p className="mb-4 text-base text-center text-white">
                     Registrate y desbloquea el acceso completo a la plataforma.
                   </p>
-                  <div className="flex justify-center">
+                  <div className="flex justify-center bg-green">
                     <motion.a
                       href="https://mooneymaker.co/?ref=57781"
                       className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold rounded-lg shadow-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 ease-in-out transform hover:scale-105 text-lg"
@@ -579,6 +579,7 @@ export default function LandingPage() {
                     href="https://mooneymaker.co/?ref=57781"
                     text="¡REGISTRARME AHORA!"
                     size="large"
+                    variant="default"
                   />
                 </div>
               </div>
