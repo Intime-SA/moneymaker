@@ -127,18 +127,7 @@ export default function LandingPage() {
                     Acceso desde cualquier dispositivo
                   </p>
                 </motion.div>
-                <motion.div
-                  className="bg-gray-900/60 p-3 rounded-lg border border-neutral-700/50 transition-all duration-300 hover:border-custom-green hover:shadow-[0_0_15px_rgba(0,143,57,0.6)]"
-                  whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-                >
-                  <h3 className="font-semibold text-base mb-1 flex items-center justify-center">
-                    <Coins className="w-4 h-4 mr-2 text-custom-green" />
-                    Depósitos Fáciles
-                  </h3>
-                  <p className="text-sm text-gray-300 text-center">
-                    Múltiples métodos de pago seguros
-                  </p>
-                </motion.div>
+                
                 <motion.div
                   className="bg-gray-900/60 p-3 rounded-lg border border-neutral-700/50 transition-all duration-300 hover:border-custom-green hover:shadow-[0_0_15px_rgba(0,143,57,0.6)]"
                   whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
@@ -148,7 +137,7 @@ export default function LandingPage() {
                     Premios Instantáneos
                   </h3>
                   <p className="text-sm text-gray-300 text-center">
-                    Retirá tus ganancias sin complicaciones
+                    Retirá sin complicaciones
                   </p>
                 </motion.div>
               </motion.div>
@@ -185,7 +174,7 @@ export default function LandingPage() {
                   <div className="flex justify-center">
                     <motion.a
                       href="https://mooneymaker.co/?ref=57781"
-                      className="bg-custom-green text-white font-bold py-3 px-6 rounded-lg shadow-lg text-lg border-2 border-green-400 hover:bg-green-700 hover:border-green-500 hover:scale-105 active:scale-95 transition-all duration-300 ease-in-out transform"
+                      className="bg-green-700 text-white font-bold py-5 px-10 rounded-lg shadow-lg text-2xl border-2 border-green-600 hover:bg-green-800 hover:border-green-700 hover:scale-105 active:scale-95 transition-all duration-300 ease-in-out transform"
                     >
                       Registrate Ahora
                     </motion.a>
@@ -477,7 +466,7 @@ export default function LandingPage() {
 
             {/* Características */}
             <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-left max-w-4xl mx-auto"
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left max-w-4xl mx-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.4 }}
@@ -506,18 +495,7 @@ export default function LandingPage() {
                   Acceso desde cualquier dispositivo
                 </p>
               </motion.div>
-              <motion.div
-                className="bg-gray-900/60 p-5 rounded-lg border border-neutral-700/50 transition-all duration-300 hover:border-custom-green hover:shadow-[0_0_20px_rgba(0,143,57,0.6)]"
-                whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-              >
-                <h3 className="font-semibold text-lg mb-2 flex items-center">
-                  <Coins className="w-5 h-5 mr-2 text-custom-green" />
-                  Depósitos Fáciles
-                </h3>
-                <p className="text-gray-300">
-                  Múltiples métodos de pago seguros
-                </p>
-              </motion.div>
+             
               <motion.div
                 className="bg-gray-900/60 p-5 rounded-lg border border-neutral-700/50 transition-all duration-300 hover:border-custom-green hover:shadow-[0_0_20px_rgba(0,143,57,0.6)]"
                 whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
@@ -527,7 +505,7 @@ export default function LandingPage() {
                   Premios Instantáneos
                 </h3>
                 <p className="text-gray-300">
-                  Retirá tus ganancias sin complicaciones
+                  Retirá sin complicaciones
                 </p>
               </motion.div>
             </motion.div>
@@ -575,7 +553,7 @@ export default function LandingPage() {
                 <div className="flex justify-center">
                   <a 
                     href="https://mooneymaker.co/?ref=57781" 
-                    className="bg-custom-green text-white font-bold py-3 px-6 rounded-lg shadow-lg text-lg border-2 border-green-400 hover:bg-green-700 hover:border-green-500 hover:scale-105 active:scale-95 transition-all duration-300 ease-in-out transform"
+                    className="bg-green-700 text-white font-bold py-5 px-10 rounded-lg shadow-lg text-2xl border-2 border-green-600 hover:bg-green-800 hover:border-green-700 hover:scale-105 active:scale-95 transition-all duration-300 ease-in-out transform"
                   >
                     Registrate Ahora
                   </a>

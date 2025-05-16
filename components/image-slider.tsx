@@ -68,25 +68,25 @@ export default function RegistrationStepsSlider() {
   }, [nextSlide])
 
   return (
-    <section className="py-16 relative overflow-hidden">
+    <section className="py-20 lg:py-28 relative overflow-hidden">
       {/* Elementos decorativos */}
       <div className="absolute -top-20 -left-20 w-60 h-60  rounded-full blur-3xl"></div>
       <div className="absolute -bottom-20 -right-20 w-60 h-60  rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-2 sm:px-4">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             <span className="text-[#008F39]">Tres Pasos</span> Para Empezar a Ganar
           </h2>
-          <p className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-2xl lg:max-w-3xl mx-auto">
             Nuestro proceso de registro es rápido y sencillo. En minutos estarás listo para jugar y ganar.
           </p>
         </div>
 
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative max-w-5xl lg:max-w-6xl mx-auto">
           <div className="overflow-hidden rounded-2xl shadow-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700">
             <div className="flex flex-col lg:flex-row items-center">
-              <div className="w-full lg:w-3/5 p-4 lg:p-6">
+              <div className="w-full lg:w-3/5 p-4 lg:p-8">
                 <div
                   className="relative aspect-[3/4] md:aspect-[3/3] overflow-hidden rounded-xl border-4 border-[#008F39]/20"
                   style={{ boxShadow: "0 0 30px rgba(0, 143, 57, 0.3)" }}
@@ -102,14 +102,14 @@ export default function RegistrationStepsSlider() {
                 </div>
               </div>
 
-              <div className="w-full lg:w-2/5 p-4 lg:p-6">
+              <div className="w-full lg:w-2/5 p-4 lg:p-8">
                 <Card className="bg-gray-900/80 border-none">
-                  <CardContent className="p-4 sm:p-6">
+                  <CardContent className="p-4 sm:p-6 lg:p-8">
                     <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                      <div className="bg-[#008F39]/20 p-2 sm:p-3 rounded-full">{steps[currentIndex].icon}</div>
-                      <h3 className="text-xl sm:text-2xl font-bold text-[#008F39]">{steps[currentIndex].title}</h3>
+                      <div className="bg-[#008F39]/20 p-2 sm:p-3 lg:p-4 rounded-full">{steps[currentIndex].icon}</div>
+                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#008F39]">{steps[currentIndex].title}</h3>
                     </div>
-                    <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6">{steps[currentIndex].description}</p>
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-4 sm:mb-6">{steps[currentIndex].description}</p>
 
                     <div className="flex justify-between items-center">
                       <div className="flex gap-2">
@@ -151,7 +151,7 @@ export default function RegistrationStepsSlider() {
                 </Card>
 
                 <div className="mt-6 text-center">
-                  <Button className="bg-[#008F39] hover:bg-[#006d2c] text-white font-bold px-6 py-3 sm:px-8 sm:py-4 md:py-6 text-base sm:text-lg rounded-full">
+                  <Button className="bg-[#008F39] hover:bg-[#006d2c] text-white font-bold px-6 py-3 sm:px-8 sm:py-4 md:py-6 lg:px-10 lg:py-7 text-base sm:text-lg lg:text-xl rounded-full">
                     Comenzar Ahora
                   </Button>
                 </div>

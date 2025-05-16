@@ -7,8 +7,6 @@ export default function GameIconsSection() {
   const icons = [
     { icon: <Dices className="w-8 h-8" />, label: "Dados" },
     { icon: <Joystick className="w-8 h-8" />, label: "Juegos" },
-    { icon: <Trophy className="w-8 h-8" />, label: "Premios" },
-    { icon: <Coins className="w-8 h-8" />, label: "Monedas" },
     { icon: <Target className="w-8 h-8" />, label: "Objetivos" },
     { icon: <Flame className="w-8 h-8" />, label: "Popular" },
     { icon: <Zap className="w-8 h-8" />, label: "Rápido" },
