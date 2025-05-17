@@ -94,6 +94,8 @@ export default function AnimatedCtaButton({
 
       <Link href={href} target="_blank" rel="noopener noreferrer" passHref legacyBehavior>
         <motion.button
+
+          id='cta-button'
           onClick={handleClick}
           disabled={isLoading}
           className={`relative z-10 ${bgColor} ${currentTextColor} font-bold rounded-lg border-2 border-custom-green shadow-lg ${sizeClasses} flex items-center justify-center ${isLoading ? 'cursor-wait' : ''}`}
